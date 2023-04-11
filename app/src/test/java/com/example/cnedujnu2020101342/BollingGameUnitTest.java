@@ -22,6 +22,12 @@ public class BollingGameUnitTest {
         for (int i = 0; i < n; i++)
             g.roll(pins);
     }
+
+    private void rollSpare() {
+        g.roll(5);
+        g.roll(5);
+    }
+
     @Test
     public void test1()
     {
@@ -37,8 +43,7 @@ public class BollingGameUnitTest {
     @Test
     public  void test3()
     {
-        g.roll(5);
-        g.roll(5);
+        rollSpare();
         g.roll(3);
         rollMany(17,0);
         assertEquals(16,g.score());
