@@ -15,7 +15,7 @@ public class BollingGameUnitTest {
     private game g;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         g = new game();
     }
 
@@ -30,6 +30,9 @@ public class BollingGameUnitTest {
     @Test
     public void test2()
     {
-
+        for(int i=0;i<20;i++){
+            g.roll(1);
+        }
+        assertEquals(20,g.score());
     }
 }
