@@ -16,8 +16,7 @@ public class game {
             {
                 score += 10 + rolls[frameIndex + 2];
                 frameIndex += 2;
-            }
-            if(isSTRIKE(frameIndex)){
+            } else if(isSTRIKE(frameIndex)){
                 score += 10 +rolls[frameIndex+1]+rolls[frameIndex + 2];
                 frameIndex += 1;
             }else {
