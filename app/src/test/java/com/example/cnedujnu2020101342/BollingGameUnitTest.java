@@ -1,5 +1,6 @@
 package com.example.cnedujnu2020101342;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,13 +11,25 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class BollingGameUnitTest {
+
+    private game g;
+
+    @Before
+    public void setUp() throws Exception {
+        g = new game();
+    }
+
     @Test
     public void test1()
     {
-        game g =new game();
         for(int i=0;i<20;i++){
             g.roll(0);
         }
-        assertEquals(0,g.score());
+        assertEquals(0, g.score());
+    }
+    @Test
+    public void test2()
+    {
+
     }
 }
